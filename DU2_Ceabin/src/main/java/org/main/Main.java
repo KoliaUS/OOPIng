@@ -2,9 +2,6 @@ package org.main;
 
 import org.model.*;
 
-
-
-
 public class Main {
     public static void main(String[] args) {
         SocialNetwork network = new SocialNetwork();
@@ -19,41 +16,35 @@ public class Main {
         network.registerUser(u3);
         network.registerUser(u4);
 
-        u1.addFriend(u2);
-        u1.addFriend(u3);
-        u1.addFriend(u4);
+        u1.addFollow(u2);
+        u1.addFollow(u3);
+        u1.addFollow(u4);
 
-        u2.addFriend(u3);
-        u2.addFriend(u4);
+        u2.addFollow(u3);
+        u2.addFollow(u4);
 
         network.createGroup("Pejskaři");
         network.createGroup("Kočkaři");
 
         Group dogsGroup = network.groups.get(0);
-        dogsGroup.addMember(u3);
-        dogsGroup.addMember(u4);
+        dogsGroup.addFollow(u3);
+        dogsGroup.addFollow(u4);
 
         Group catsGroup = network.groups.get(1);
-        catsGroup.addMember(u1);
-        catsGroup.addMember(u2);
+        catsGroup.addFollow(u1);
+        catsGroup.addFollow(u2);
 
-        u3.addPost("Nazdar!", u3);
-        dogsGroup.addPost("Miluju pejsky", u3);
+        u3.addPost("Muj prvni post");
+        dogsGroup.addPost("Miluju psy!", u3);
 
-        u1.addPost("Ahoj vsem!", u1);
-        catsGroup.addPost("Kocky jsou top", u1);
-
-        u2.addPost("F", u2);
-        catsGroup.addPost("Cats!!!!", u2);
+        u1.addPost("Nazdar!");
+        catsGroup.addPost("Kocky jsou top!", u2);
 
 
         u1.printFeed();
         u2.printFeed();
         u3.printFeed();
         u4.printFeed();
-
-
-
 
     }
 }

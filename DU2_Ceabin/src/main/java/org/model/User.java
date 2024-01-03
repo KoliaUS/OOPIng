@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class User {
+public class User implements Observer,Observable {
     private String username;
     private List<User> friends;
     private List<Group> groups;
@@ -21,10 +21,6 @@ public class User {
         this.feed = new Feed();
     }
 
-    public void addFriend(User user) {
-        friends.add(user);
-        user.friends.add(this);
-    }
     public String getUsername() {
         return username;
     }
@@ -32,16 +28,12 @@ public class User {
     public List<User> getFriends() {
         return friends;
     }
-    public void addPost(String text, User user) {
+    public void addPost(String text) {
         Post post = new Post(this, text);
         posts.add(post);
         addToFeed(post);
     }
-    public void addPostToGroup(String text, Group group) {
-        Post post = new Post(this, text);
-        post.setAddedToGroupBy(group);
-        group.addPostToGroup(post);
-    }
+
 
     public void addToFeed(Post post) {
         post.setAddedToFeedBy(this);
@@ -110,13 +102,34 @@ public class User {
 
     public void printFeed() {
         System.out.println("Feed uživatele " + this.getUsername() + ":");
-        for (Post post : this.getFeedPosts()) {
-            String addedToGroup = post.getAddedToGroupBy() != null ? " (" + post.getAddedToGroupName() + ")" : "";
 
-            System.out.println(post.getAuthor().getUsername() + ": " + post.getText() + addedToGroup);
+        for (Post post : this.getFeedPosts()) {
+
+            if (post.getAddedToGroupBy() != null) {
+                System.out.println("Group: " + post.getAddedToGroupName());
+            }
+
+            String authorUsername = post.getAuthor().getUsername();
+            String postText = post.getText();
+
+            System.out.println(authorUsername + ": " + postText);
         }
+
+
         System.out.println();
     }
 
 
+    @Override
+    public void addFollow(User user) {
+        friends.add(user);
+        user.friends.add(this);
+    }
+
+    @Override
+    public void notification(Post post) {
+        post.setAddedToFeedBy(this);
+        feed.addPost(post);
+        updateFeed();
+    }
 }

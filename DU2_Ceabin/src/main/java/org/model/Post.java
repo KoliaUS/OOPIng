@@ -19,8 +19,6 @@ public class Post {
         return text;
     }
 
-
-
     public void setAddedToFeedBy(User user) {
         this.addedToFeedBy = user;
     }
@@ -32,9 +30,7 @@ public class Post {
         return this.addedToGroupBy != null ? addedToGroupBy.getName() : "None";
     }
 
-    public void setAddedToGroupBy(Group group) {
-        this.addedToGroupBy = group;
-    }
+
 
     public Group getAddedToGroupBy() {
         return addedToGroupBy;
