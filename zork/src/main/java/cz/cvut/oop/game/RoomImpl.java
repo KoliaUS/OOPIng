@@ -12,11 +12,14 @@ public class RoomImpl implements Room {
     private String description;
     private Map<String,Room> exits = new HashMap<>();
 
+    private Enemy enemy;
+
 
     public RoomImpl(String name, String description){
         this.name = name;
         this.description = description;
     }
+
 
     /**
      *  Adds new exit to map

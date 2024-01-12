@@ -12,27 +12,32 @@ import java.util.Scanner;
  */
 public class CommandLineUi {
     private static final Logger log = LoggerFactory.getLogger(CommandLineUi.class);
-    private static final CommandLineUi INSTANCE = new CommandLineUi();
-    private final Game game;
+    private static CommandLineUi INSTANCE = new CommandLineUi();
+    private Game game;
 
-    private CommandLineUi() {
+    private CommandLineUi(){
         this.game = new GameImpl();
-    }
 
-    public static CommandLineUi getInstance() {
+    }
+    //TODO NOT SINGLETON
+    public static CommandLineUi getInstance(){
         return INSTANCE;
     }
-
-    public void start() {
+    /**
+     *  After ui is started, application prints welcome messages and waits for user input
+     *  then proceeds to process user input and return messages back here
+     *  -> to be represented on this view.
+     */
+    public void start(){
         log.info("application started");
-        try (Scanner scanner = new Scanner(System.in)) {
+        try(Scanner scanner = new Scanner(System.in)){
             System.out.println(this.game.welcomeMessage());
-            while (this.game.isFinished()) {
+            while(!this.game.isFinished()){
                 System.out.print("> ");
                 System.out.println(this.game.processTextCommand(scanner.nextLine()));
             }
             System.out.println(this.game.endMessage());
         }
     }
-}
 
+}

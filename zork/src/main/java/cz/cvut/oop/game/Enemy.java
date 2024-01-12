@@ -5,7 +5,7 @@ import java.util.Random;
 public class Enemy {
     private final String name;
     private final EnemyStats stats;
-    private int currentHealth;
+    private double currentHealth;
 
     private Enemy(String name, EnemyStats stats) {
         this.name = name;
@@ -21,7 +21,7 @@ public class Enemy {
         return stats;
     }
 
-    public boolean receiveDamage(int damage) {
+    public boolean receiveDamage(double damage) {
         currentHealth -= damage;
         if (currentHealth <= 0) {
             currentHealth = 0;
@@ -30,15 +30,15 @@ public class Enemy {
         return false; // Enemy survived
     }
 
-    public int getMaxDamage() {
-        return stats.getDamageMax();
+    public double getDamage()
+    {
+        Random rand = new Random();
+        double enemyDamage = 1.0 + rand.nextDouble() * 0.5 + stats.getEnemyDamage();
+        return enemyDamage;
     }
 
-    public int getMinDamage() {
-        return stats.getDamageMin();
-    }
 
-    public int getCurrentHealth() {
+    public double getCurrentHealth() {
         return currentHealth;
     }
 

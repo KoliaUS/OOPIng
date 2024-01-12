@@ -3,7 +3,31 @@ package cz.cvut.oop.game;
 import java.util.Random;
 
 // Třída reprezentující zbraň
-public class Weapon {
+public class Weapon extends Item {
+    private int damage;
+
+    public Weapon(String name, int damage) {
+        super(name);
+        this.damage = damage;
+    }
+
+
+
+    @Override
+    public ItemType getType() {
+        return ItemType.WEAPON;
+    }
+
+    public double getDamage()
+    {
+        Random rand = new Random();
+        double weaponDamage = 1.0 + rand.nextDouble() * 0.5 + damage;
+        return weaponDamage;
+    }
+}
+
+
+/*public class Weapon {
     private String name;
     private final int minDamage;
     private final int maxDamage;
@@ -23,3 +47,4 @@ public class Weapon {
         return name;
     }
 }
+*/

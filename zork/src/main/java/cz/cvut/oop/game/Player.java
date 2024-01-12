@@ -2,7 +2,7 @@ package cz.cvut.oop.game;
 
 public class Player {
     private String name;
-    private int health;
+    private double health;
     private Weapon currentWeapon;
     // Možná další atributy jako štít, lektvary a další vlastnosti
 
@@ -15,11 +15,11 @@ public class Player {
         return name;
     }
 
-    public int getHealth() {
+    public double getHealth() {
         return health;
     }
 
-    public void setHealth(int health) {
+    public void setHealth(double health) {
         this.health = health;
     }
 
@@ -31,9 +31,9 @@ public class Player {
         this.currentWeapon = currentWeapon;
     }
 
-    public void receiveDamage(int damage) {
-        int currentHealth = getHealth();
-        int newHealth = currentHealth - damage;
+    public void receiveDamage(double damage) {
+        double currentHealth = getHealth();
+        double newHealth = currentHealth - damage;
         setHealth(newHealth);
     }
 

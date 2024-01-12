@@ -1,25 +1,19 @@
 package cz.cvut.oop.game;
 
 public class EnemyStats {
-    private final int damageMin;
-    private final int damageMax;
-    private final int health;
+    private double enemyDamage;
+    private double health;
 
-    public EnemyStats(int damageMin, int damageMax, int health) {
-        this.damageMin = damageMin;
-        this.damageMax = damageMax;
+    public EnemyStats(double enemyDamage, double health) {
+        this.enemyDamage = enemyDamage;
         this.health = health;
     }
 
-    public int getDamageMin() {
-        return damageMin;
+    public double getEnemyDamage() {
+        return enemyDamage;
     }
 
-    public int getDamageMax() {
-        return damageMax;
-    }
-
-    public int getHealth() {
+    public double getHealth() {
         return health;
     }
 }
