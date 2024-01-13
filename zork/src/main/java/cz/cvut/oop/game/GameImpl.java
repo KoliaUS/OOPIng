@@ -29,12 +29,15 @@ public class GameImpl implements Game {
         Command reset = new ResetCommand();
         GoCommand go = new GoCommand();
         EndCommand end = new EndCommand();
+        AttackCommand attack = new AttackCommand();
 
 
         commands.put(help.getName(), help);
         commands.put(reset.getName(), reset);
         commands.put(go.getName(), go);
         commands.put(end.getName(), end);
+        commands.put(attack.getName(),attack);
+
     }
 
     /**
@@ -72,7 +75,7 @@ public class GameImpl implements Game {
         String[] args = line.split(" ");
         Command command = commands.getOrDefault(args[0], null);
         if(command != null){
-            result = command.execute(null, gameData);
+            result = command.execute(args, gameData);
         }
         else{
             result = "Neznámý příkaz, zkuste jiný nebo vyzkoušejte příkaz 'nápověda'";

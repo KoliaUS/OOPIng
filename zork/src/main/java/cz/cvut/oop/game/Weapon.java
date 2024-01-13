@@ -12,7 +12,6 @@ public class Weapon extends Item {
     }
 
 
-
     @Override
     public ItemType getType() {
         return ItemType.WEAPON;
@@ -21,7 +20,7 @@ public class Weapon extends Item {
     public double getDamage()
     {
         Random rand = new Random();
-        double weaponDamage = 1.0 + rand.nextDouble() * 0.5 + damage;
+        double weaponDamage = 1.0 + rand.nextDouble() * 10 + damage;
         return weaponDamage;
     }
 }

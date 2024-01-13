@@ -18,15 +18,21 @@ public class GoCommand implements Command {
         }
 
         String roomName = arguments[1];
-
         Room exitByName = gameData.getCurrentRoom().getExitByName(roomName);
+
         if (exitByName == null) {
             return "Exit do místnosti '" + roomName + "' neexistuje.";
         }
 
+        if (gameData.getCurrentRoom().getEnemy() != null && !gameData.getCurrentRoom().getEnemy().isDead()) {
+            return "Nepřítel ti stojí v cestě!!!";
+        }
+
         gameData.setCurrentRoom(exitByName);
-        return "Přesunut do místnosti " + gameData.getCurrentRoom().getDescriptionWithExits();
+        return String.format("Přesunut do místnosti %s %s %s",
+                roomName, gameData.getCurrentRoom().getDescriptionWithExits(), gameData.getCurrentRoom().getDescriptionRoom());
     }
+
 
 }
 

@@ -12,12 +12,36 @@ public class RoomImpl implements Room {
     private String description;
     private Map<String,Room> exits = new HashMap<>();
 
+    private List<Item> items = new ArrayList<>();
+
     private Enemy enemy;
 
 
     public RoomImpl(String name, String description){
         this.name = name;
         this.description = description;
+    }
+
+    public RoomImpl(String name, String description, Enemy enemy){
+        this.name = name;
+        this.description = description;
+        this.enemy = enemy;
+    }
+
+    public void addItem(Item item)
+    {
+        items.add(item);
+    }
+
+    @Override
+    public void addItemFromEnemy(Collection<Item> items)
+    {
+        this.items.addAll(items);
+    }
+
+    @Override
+    public List<Item> getItems() {
+        return Collections.unmodifiableList(items);
     }
 
 
@@ -32,6 +56,14 @@ public class RoomImpl implements Room {
     @Override
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String getDescriptionRoom(){
+        if(enemy==null){
+            return "Popisek: "+description;
+        }
+        return "V místnosti se nachází: "+enemy.getName()+ " popisek: " + description;
     }
 
     /**
@@ -78,5 +110,10 @@ public class RoomImpl implements Room {
     @Override
     public int hashCode() {
         return Objects.hash(name);
+    }
+
+    @Override
+    public Enemy getEnemy() {
+        return enemy;
     }
 }

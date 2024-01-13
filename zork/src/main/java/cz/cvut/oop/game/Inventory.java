@@ -18,4 +18,8 @@ public class Inventory {
             System.out.println("Není místo v inventáři.");
         }
     }
+
+    public ArrayList<Item> getItemArrayList() {
+        return itemArrayList;
+    }
 }
