@@ -1,16 +1,22 @@
 package cz.cvut.oop.game;
 
+import java.text.CollationElementIterator;
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class Player {
     private String name;
     private double health;
     private Weapon currentWeapon;
     private Inventory inventory;
 
+
+
     // Možná další atributy jako štít, lektvary a další vlastnosti
 
     public Player() {
         this.health = 100;
-        this.currentWeapon = startWeapon();
+        this.currentWeapon = null;
         this.inventory = new Inventory();
     }
 
@@ -35,11 +41,7 @@ public class Player {
     }
 
     public Weapon startWeapon() {
-        // Vytvoření instance startovací zbraně s názvem "Startovací meč" a poškozením 10
-        Weapon startWeapon = new Weapon("Startovací meč", 30);
-
-        // Nastavení startovací zbraně hráči
-
+        Weapon startWeapon = new Weapon("StartovacíMeč", 3000);
 
         return startWeapon;
     }
@@ -56,4 +58,22 @@ public class Player {
         }
         return false;
     }
+
+
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    public boolean hasKey() {
+        for (Item item : inventory.getItemArrayList()) {
+            if (item.getType() == Item.ItemType.KEY) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+
+
 }

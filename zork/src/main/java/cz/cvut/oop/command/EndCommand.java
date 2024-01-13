@@ -5,12 +5,12 @@ import cz.cvut.oop.game.GameData;
 public class EndCommand implements Command {
     @Override
     public String getName(){
-        return "Konec Hry";
+        return "konec";
     }
 
     @Override
     public String execute(String[] arguments, GameData gameData) {
-        gameData.setFinished(true); // Nastaví flag označující, že hra je dokončena
+        gameData.setFinished(true);
         return "Hra byla ukončena.";
     }
 

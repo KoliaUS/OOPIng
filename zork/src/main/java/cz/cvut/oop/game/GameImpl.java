@@ -30,6 +30,8 @@ public class GameImpl implements Game {
         GoCommand go = new GoCommand();
         EndCommand end = new EndCommand();
         AttackCommand attack = new AttackCommand();
+        LookCommand look = new LookCommand();
+        TakeCommand take = new TakeCommand();
 
 
         commands.put(help.getName(), help);
@@ -37,6 +39,8 @@ public class GameImpl implements Game {
         commands.put(go.getName(), go);
         commands.put(end.getName(), end);
         commands.put(attack.getName(),attack);
+        commands.put(look.getName(),look);
+        commands.put(take.getName(),take);
 
     }
 
@@ -78,7 +82,7 @@ public class GameImpl implements Game {
             result = command.execute(args, gameData);
         }
         else{
-            result = "Neznámý příkaz, zkuste jiný nebo vyzkoušejte příkaz 'nápověda'";
+            result = "Neznámý příkaz, zkuste jiný nebo vyzkoušejte příkaz 'help'";
         }
         return result;
     }

@@ -12,7 +12,8 @@ public class RoomImpl implements Room {
     private String description;
     private Map<String,Room> exits = new HashMap<>();
 
-    private List<Item> items = new ArrayList<>();
+    private Collection<Item> items = new ArrayList<>();
+
 
     private Enemy enemy;
 
@@ -34,6 +35,11 @@ public class RoomImpl implements Room {
     }
 
     @Override
+    public void removeItem(Item item) {
+        items.remove(item);
+    }
+
+    @Override
     public void addItemFromEnemy(Collection<Item> items)
     {
         this.items.addAll(items);
@@ -41,8 +47,9 @@ public class RoomImpl implements Room {
 
     @Override
     public List<Item> getItems() {
-        return Collections.unmodifiableList(items);
+        return Collections.unmodifiableList(new ArrayList<>(items));
     }
+
 
 
     /**
@@ -111,6 +118,7 @@ public class RoomImpl implements Room {
     public int hashCode() {
         return Objects.hash(name);
     }
+
 
     @Override
     public Enemy getEnemy() {

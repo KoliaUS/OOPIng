@@ -15,4 +15,8 @@ public interface Room {
     String getDescriptionRoom();
     void addItemFromEnemy(Collection<Item> items);
     List<Item> getItems();
+
+    void addItem(Item item);
+
+    void removeItem(Item item);
 }

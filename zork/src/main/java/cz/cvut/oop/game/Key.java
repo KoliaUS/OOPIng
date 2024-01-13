@@ -11,4 +11,6 @@ class Key extends Item {
     public ItemType getType() {
         return ItemType.KEY;
     }
+
+
 }

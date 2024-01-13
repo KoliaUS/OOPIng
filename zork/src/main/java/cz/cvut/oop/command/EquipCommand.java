@@ -22,6 +22,7 @@ public class EquipCommand implements Command {
 
     @Override
     public String execute(String[] arguments, GameData gameData) {
+
         if (arguments.length < 2) {
             return "Neplatný příkaz 'nasaď'. Musíte zadat název zbraně.";
         }

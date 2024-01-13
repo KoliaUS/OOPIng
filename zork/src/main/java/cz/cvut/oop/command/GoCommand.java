@@ -1,5 +1,6 @@
 package cz.cvut.oop.command;
 
+import cz.cvut.oop.game.EnemyAction;
 import cz.cvut.oop.game.GameData;
 import cz.cvut.oop.game.Room;
 
@@ -24,15 +25,21 @@ public class GoCommand implements Command {
             return "Exit do místnosti '" + roomName + "' neexistuje.";
         }
 
-        if (gameData.getCurrentRoom().getEnemy() != null && !gameData.getCurrentRoom().getEnemy().isDead()) {
-            return "Nepřítel ti stojí v cestě!!!";
+
+        if (!gameData.hasVisitedRoom(exitByName) && gameData.getCurrentRoom().getEnemy() != null && !gameData.getCurrentRoom().getEnemy().isDead()) {
+            return "Nemůžeš jít do nové místnosti, dokud nezabiješ nepřítele v této místnosti!";
         }
 
+
+        if (roomName.equalsIgnoreCase("Ruina") && !gameData.getPlayer().hasKey()) {
+            return "K přístupu do Ruiny potřebuješ klíč!";
+        }
+        EnemyAction.performEnemyAction(gameData);
+
         gameData.setCurrentRoom(exitByName);
-        return String.format("Přesunut do místnosti %s %s %s",
+        return String.format("Přesunut do místnosti %s %s, \n %s",
                 roomName, gameData.getCurrentRoom().getDescriptionWithExits(), gameData.getCurrentRoom().getDescriptionRoom());
     }
 
 
 }
-

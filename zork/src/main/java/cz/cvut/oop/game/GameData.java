@@ -9,6 +9,8 @@ public interface GameData {
     Room getCurrentRoom();
     List<Room> getRooms();
     Player getPlayer();
-    void setCurrentRoom(Room currentRoom);
+
     void init();
+    void setCurrentRoom(Room currentRoom);
+    boolean hasVisitedRoom(Room room);
 }
