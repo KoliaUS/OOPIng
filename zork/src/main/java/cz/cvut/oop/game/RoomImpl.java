@@ -66,12 +66,27 @@ public class RoomImpl implements Room {
     }
 
     @Override
-    public String getDescriptionRoom(){
-        if(enemy==null){
-            return "Popisek: "+description;
+    public String getDescriptionRoom() {
+        String descriptionString = "Popisek: " + description;
+
+        if (enemy != null) {
+            descriptionString += "\nV místnosti se nachází nepřítel: " + enemy.getName();
+        } else {
+            descriptionString += "\nV místnosti není žádný nepřítel";
         }
-        return "V místnosti se nachází: "+enemy.getName()+ " popisek: " + description;
+
+        if (!items.isEmpty()) {
+            descriptionString += "\nV místnosti jsou následující předměty:";
+            for (Item item : items) {
+                descriptionString += " " + item.getName();
+            }
+        } else {
+            descriptionString += "\nNenachází se žádné předměty";
+        }
+
+        return descriptionString;
     }
+
 
     /**
      *  Method returns description of this room (from getDescription call)

@@ -1,7 +1,7 @@
 package cz.cvut.oop.game;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Inventory {
     private ArrayList<Item> itemArrayList;
@@ -21,5 +21,18 @@ public class Inventory {
 
     public ArrayList<Item> getItemArrayList() {
         return itemArrayList;
+    }
+
+    public void removeFromInventory(Item item) {
+        itemArrayList.remove(item);
+    }
+
+    public Item getItemByName(String itemName) {
+        for (Item item : itemArrayList) {
+            if (item.getName().equalsIgnoreCase(itemName)) {
+                return item;
+            }
+        }
+        return null;
     }
 }

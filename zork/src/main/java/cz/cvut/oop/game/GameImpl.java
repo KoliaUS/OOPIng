@@ -32,6 +32,7 @@ public class GameImpl implements Game {
         AttackCommand attack = new AttackCommand();
         LookCommand look = new LookCommand();
         TakeCommand take = new TakeCommand();
+        DropCommand drop = new DropCommand();
 
 
         commands.put(help.getName(), help);
@@ -41,6 +42,7 @@ public class GameImpl implements Game {
         commands.put(attack.getName(),attack);
         commands.put(look.getName(),look);
         commands.put(take.getName(),take);
+        commands.put(drop.getName(),drop);
 
     }
 
@@ -51,8 +53,11 @@ public class GameImpl implements Game {
     @Override
     public String welcomeMessage() {
         //TODO doplnit pořádnou uvítací hlášku
-        return "Startovní hláška hry, pokud nevíte co a jak, \n" +
-                "použijte příkaz 'help' \n"
+        return "Vítej do světa temnoty a dobrodružství!\n"
+                + "Tvým úkolem je prozkoumat temné jeskyně, staré hrobky a kouzelné věže, sbírat cenné předměty a připravit se na souboje.\n"
+                + "Tvůj konečný cíl je dosáhnout sídla samotného Diabla. Připrav se na nebezpečné cesty, plné tajemství a rozhodnutí, která ovlivní tvůj osud.\n"
+                + "Hodně štěstí!\n"
+                + "Pokud nevíte co a jak, použijte příkaz 'help'\n"
                 + gameData.getCurrentRoom().getDescription();
     }
 
@@ -62,9 +67,18 @@ public class GameImpl implements Game {
      */
     @Override
     public String endMessage() {
-        //TODO doplnit pořádnou koncovou hlášku
-        return "Koncová hláška";
+        String name = gameData.getCurrentRoom().getEnemy().getName();
+
+        if ("Diablo".equals(name) && gameData.getCurrentRoom().getEnemy().isDead()) {
+            return "Gratuluji! Podařilo se ti dosáhnout sídla Diabla a porazit ho!\n"
+                    + "Tvé dobrodružství skončilo vítězně. Díky za hraní!";
+        } else {
+            return "Bohužel, tvé dobrodružství skončilo nezdarem.\n"
+                    + "Diablo tě přemohl a temnota pohltila tvou cestu.\n"
+                    + "Ale nezoufej, až budeš připraven, zkus to znovu. Díky za hraní!";
+        }
     }
+
 
     /**
      *  Method parses input line and should divide its parts to command name

@@ -19,7 +19,15 @@ public class HelpCommand implements Command {
 
     @Override
     public String execute(String[] arguments, GameData gameData) {
-        return "Můžeme znovu vytisknout úvodní příběh, možné příkazy: " + commands.keySet().toString();
+        return "Možné příkazy:\n" +
+                "help - Vysvětlení příkazů\n" +
+                "polož - Příkaz po kterém se položí předmět na zem\n" +
+                "útok - Útočíš na protivníka\n" +
+                "reset - Resetuje/restartuje hru\n" +
+                "vezmi - Vezmeš věci ze země\n" +
+                "jdi - Půjdeš do vybrané místnosti\n" +
+                "konec - Konec hry\n" +
+                "hledat - Prohledáváš prostor kolem sebe";
     }
 }
 

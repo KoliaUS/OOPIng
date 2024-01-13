@@ -26,30 +26,30 @@ public class GameDataImpl implements GameData {
     public void init(){
         this.rooms = new ArrayList<>();
         Room baseRoom = new RoomImpl("VchodJeskyně", "temná jeskyně a před sebou vidíš dveře do Hrobky");
-        Weapon sword = new Weapon("Meč", 20);
+        Weapon sword = new Weapon("Meč", 10);
         baseRoom.addItem(sword);
-        Room tombs = new RoomImpl("Hrobka", "Hrobka s kostlivcem",new Enemy("Kostlivec",new EnemyStats(20,75), new Weapon("StrbnyMec",25)));
+        Room tombs = new RoomImpl("Hrobka", "Hrobka s kostlivcem",new Enemy("Kostlivec",new EnemyStats(4,20), new Weapon("StribrnyMec",20)));
         baseRoom.registerExit(tombs);
         tombs.registerExit(baseRoom);
 
-        Room mine = new RoomImpl("Důl", "Důl s nemrtvým", new Enemy("Nemtrvý",new EnemyStats(30,85), new Weapon("ZlatyMec",35)));
+        Room mine = new RoomImpl("Důl", "Důl s nemrtvým", new Enemy("Nemtrvý",new EnemyStats(6,30), new Weapon("ZlatyMec",30)));
         tombs.registerExit(mine);
 
 
-        Room magicTower = new RoomImpl("Magickávěž", "Magická věž, kterou ochraňuje starý mág",new Enemy("Mág",new EnemyStats(40,95), new Weapon("KouzelnaHulka",45)));
+        Room magicTower = new RoomImpl("Magickávěž", "Magická věž, kterou ochraňuje starý mág",new Enemy("Mág",new EnemyStats(10,35), new Weapon("KouzelnaHulka",40)));
         mine.registerExit(magicTower);
         mine.registerExit(tombs);
 
-        Room secretRoom = new RoomImpl("TajnáMístnost", "Tajná místnost, kterou ochraňuje zlý duch kličníka",new Enemy("DuchKličník",new EnemyStats(60,110), new Key("Klic")));
+        Room secretRoom = new RoomImpl("TajnáMístnost", "Tajná místnost, kterou ochraňuje zlý duch kličníka",new Enemy("DuchKličník",new EnemyStats(20,60), new Key("Klic")));
 
 
-        Room tortureChamber = new RoomImpl("Mučírna", "Mučírna plná mrtvých těl, kterou ochraňuje dáblův sluha", new Enemy("Čert",new EnemyStats(30,105), new Weapon("OhnivyMec", 60)));
+        Room tortureChamber = new RoomImpl("Mučírna", "Mučírna plná mrtvých těl, kterou ochraňuje dáblův sluha", new Enemy("Čert",new EnemyStats(12,45), new Weapon("OhnivyMec", 50)));
         magicTower.registerExit(tortureChamber);
         magicTower.registerExit(mine);
         magicTower.registerExit(secretRoom);
         secretRoom.registerExit(magicTower);
 
-        Room ruin = new RoomImpl("Ruina", "Sídlo dábla", new Enemy("Diablo", new EnemyStats(50,120),null));
+        Room ruin = new RoomImpl("Ruina", "Sídlo dábla", new Enemy("Diablo", new EnemyStats(25,100),null));
         tortureChamber.registerExit(ruin);
         tortureChamber.registerExit(magicTower);
 
