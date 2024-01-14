@@ -54,7 +54,7 @@ public class GameImpl implements Game {
     public String welcomeMessage() {
         //TODO doplnit pořádnou uvítací hlášku
         return "Vítej do světa temnoty a dobrodružství!\n"
-                + "Tvým úkolem je prozkoumat temné jeskyně, staré hrobky a kouzelné věže, sbírat cenné předměty a připravit se na souboje.\n"
+                + "Tvým úkolem je prozkoumat temnu jeskyni, staré hrobky a kouzelné věže, sbírat cenné předměty a připravit se na souboje.\n"
                 + "Tvůj konečný cíl je dosáhnout sídla samotného Diabla. Připrav se na nebezpečné cesty, plné tajemství a rozhodnutí, která ovlivní tvůj osud.\n"
                 + "Hodně štěstí!\n"
                 + "Pokud nevíte co a jak, použijte příkaz 'help'\n"

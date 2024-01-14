@@ -40,11 +40,6 @@ public class Player {
         this.currentWeapon = currentWeapon;
     }
 
-    public Weapon startWeapon() {
-        Weapon startWeapon = new Weapon("StartovacíMeč", 3000);
-
-        return startWeapon;
-    }
 
     public void receiveDamage(double damage) {
         double currentHealth = getHealth();

@@ -19,7 +19,6 @@ public class DropCommand implements Command {
 
         String itemName = arguments[1];
 
-        // Získání aktuální místnosti a hráče
         Room currentRoom = gameData.getCurrentRoom();
         Player player = gameData.getPlayer();
         EnemyAction.performEnemyAction(gameData);

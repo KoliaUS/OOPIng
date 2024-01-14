@@ -15,6 +15,7 @@ public class Enemy {
         this.inventory = initInventory(item);
     }
 
+
     public String getName() {
         return name;
     }
@@ -31,6 +32,8 @@ public class Enemy {
         }
         return false; // Enemy survived
     }
+
+
 
     public double getDamage()
     {

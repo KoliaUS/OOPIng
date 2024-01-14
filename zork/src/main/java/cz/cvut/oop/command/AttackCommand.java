@@ -51,7 +51,7 @@ public class AttackCommand implements Command {
                 gameData.setFinished(true);
                 return "Zemřel jste. Hra skončila.";
             } else {
-                // Tento blok byl přesunut do samostatné části, aby mohl být dosažen
+
                 return "Nepřítel utrpěl " + formatDamage(damage) +
                         " poškození. Nepřítel útočí zpět a způsobil " + formatDamage(enemyDamage) + " poškození Vám. Zbývající životy hráče: " + formatHealth(player.getHealth()) +
                         ". Zbývající životy nepřítele: " + formatHealth(enemy.getCurrentHealth());

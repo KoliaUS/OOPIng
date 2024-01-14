@@ -38,7 +38,7 @@ public class TakeCommand implements Command {
         if (itemToTake instanceof Weapon) {
             Weapon weaponToTake = (Weapon) itemToTake;
 
-            // Přidání původní zbraně do místnosti
+
             Weapon originalWeapon = player.getCurrentWeapon();
             if (originalWeapon != null) {
                 currentRoom.addItem(originalWeapon);
