@@ -62,6 +62,8 @@ public class GameDataImpl implements GameData {
         rooms.add(ruin);
 
         player = new Player();
+        player.getInventory().addListener(new InventoryObserver());
+
 
         this.currentRoom = baseRoom;
         visitedRooms = new ArrayList<>();

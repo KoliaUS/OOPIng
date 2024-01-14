@@ -6,14 +6,32 @@ import java.util.Iterator;
 public class Inventory {
     private ArrayList<Item> itemArrayList;
     private int size = 5;
+    private ArrayList<InventoryListener> listeners; // Seznam posluchačů
 
     public Inventory() {
         this.itemArrayList = new ArrayList<>();
+        this.listeners = new ArrayList<>();
+    }
+
+
+    public void addListener(InventoryListener listener) {
+        listeners.add(listener);
+    }
+
+    public void removeListener(InventoryListener listener) {
+        listeners.remove(listener);
+    }
+
+    public void notifyInventory(){
+        for (InventoryListener listener : listeners) {
+            listener.printFullInventory(this.getItemArrayList());
+        }
     }
 
     public void addToInventory(Item item) {
         if (itemArrayList.size() < size) {
             itemArrayList.add(item);
+            notifyInventory();
         } else {
             System.out.println("Není místo v inventáři.");
         }
@@ -24,7 +42,9 @@ public class Inventory {
     }
 
     public void removeFromInventory(Item item) {
-        itemArrayList.remove(item);
+        if (itemArrayList.remove(item)) {
+            notifyInventory();
+        }
     }
 
     public Item getItemByName(String itemName) {

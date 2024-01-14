@@ -23,6 +23,7 @@ public class DropCommand implements Command {
         Player player = gameData.getPlayer();
         EnemyAction.performEnemyAction(gameData);
 
+
         Weapon currentWeapon = player.getCurrentWeapon();
         if (currentWeapon != null) {
             currentRoom.addItem(currentWeapon);

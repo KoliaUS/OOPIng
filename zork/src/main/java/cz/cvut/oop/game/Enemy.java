@@ -28,9 +28,9 @@ public class Enemy {
         currentHealth -= damage;
         if (currentHealth <= 0) {
             currentHealth = 0;
-            return true; // Enemy was killed
+            return true;
         }
-        return false; // Enemy survived
+        return false;
     }
 
 
@@ -56,19 +56,7 @@ public class Enemy {
         return currentHealth;
     }
 
-    public static class EnemyBuilder {
-        private final String name;
-        private final EnemyStats stats;
 
-        public EnemyBuilder(String name, EnemyStats stats) {
-            this.name = name;
-            this.stats = stats;
-        }
-
-        public Enemy build() {
-            return new Enemy(name, stats,null);
-        }
-    }
 
     public boolean isDead() {
         if (currentHealth <= 0.0){

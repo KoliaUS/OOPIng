@@ -6,3 +6,48 @@
 2024-01-14 16:49:37.854 [main] INFO  cz.cvut.oop.ui.CommandLineUi - help
 2024-01-14 16:49:46.598 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
 2024-01-14 17:34:58.203 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+2024-01-14 17:50:59.214 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+2024-01-14 17:51:06.855 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi Hrobka
+2024-01-14 17:51:08.636 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+2024-01-14 17:51:24.990 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+2024-01-14 17:51:27.689 [main] INFO  cz.cvut.oop.ui.CommandLineUi - help
+2024-01-14 17:51:31.947 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+2024-01-14 17:51:36.161 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+2024-01-14 17:51:39.994 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi Hrobka
+2024-01-14 17:51:47.835 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+2024-01-14 17:51:49.316 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+2024-01-14 17:51:52.656 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+2024-01-14 17:51:59.856 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi StribrnyMec
+2024-01-14 18:12:59.464 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+2024-01-14 18:13:12.227 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+2024-01-14 18:13:50.023 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+2024-01-14 18:14:16.490 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi Hrobka
+2024-01-14 18:14:19.123 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+2024-01-14 18:14:21.097 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+2024-01-14 18:14:26.726 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+2024-01-14 18:14:34.804 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi StrbrnyMec
+2024-01-14 18:15:15.139 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi StribrnyMec
+2024-01-14 18:15:36.621 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi Důl
+2024-01-14 18:15:39.628 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+2024-01-14 18:15:41.102 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+2024-01-14 18:15:46.719 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+2024-01-14 18:15:51.828 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi ZlatyMec
+2024-01-14 18:16:14.822 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi Magickávěž
+2024-01-14 18:16:18.941 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+2024-01-14 18:16:24.191 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+2024-01-14 18:16:29.067 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi Mučírna
+2024-01-14 18:16:43.586 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi Magickávěž
+2024-01-14 18:16:47.494 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+2024-01-14 18:17:01.795 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi KouzelnaHulka
+2024-01-14 18:17:06.964 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi Mučírna
+2024-01-14 18:17:11.304 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+2024-01-14 18:17:26.667 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi Magickávěž
+2024-01-14 18:17:37.089 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi TajnáMístnost
+2024-01-14 18:17:44.613 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+2024-01-14 18:17:50.694 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+2024-01-14 18:17:54.194 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+2024-01-14 18:17:59.647 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Klic
+2024-01-14 18:41:11.687 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+2024-01-14 18:41:16.472 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+2024-01-14 18:41:20.829 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Klic
+2024-01-14 19:29:03.098 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started

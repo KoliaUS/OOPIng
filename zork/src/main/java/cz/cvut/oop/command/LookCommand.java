@@ -36,6 +36,9 @@ public class LookCommand implements Command {
         if (currentRoom.getEnemy() != null && !currentRoom.getEnemy().isDead()) {
             result.append("V místnosti je nepřítel: ").append(currentRoom.getEnemy().getName()).append("\n");
         }
+        else{
+            result.append("V místnosti není nepřítel.\n");
+        }
         EnemyAction.performEnemyAction(gameData);
 
         if (!exits.isEmpty()) {
