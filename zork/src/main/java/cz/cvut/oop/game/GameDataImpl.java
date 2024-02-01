@@ -27,40 +27,48 @@ public class GameDataImpl implements GameData {
         this.rooms = new ArrayList<>();
         Room baseRoom = new RoomImpl("VchodJeskyně", "temná jeskyně a před sebou vidíš dveře do Hrobky");
         Weapon sword = new Weapon("Meč", 10);
-        Enemy enemy = new Enemy("Kostlivec", new EnemyStats(5,20), new Weapon("StribrnyMec",20));
+
+        Enemy kostlivec = new Enemy.EnemyBuilder("Kostlivec", new EnemyStats(5, 20), new Weapon("StribrnyMec", 20)).build();
+        Enemy nemrtvy = new Enemy.EnemyBuilder("Nemrtvy", new EnemyStats(6,30),new Weapon("ZlatyMec",30)).build();
+        Enemy duch = new Enemy.EnemyBuilder("DuchKlicnik", new EnemyStats(20,60), new Key("Klic")).build();
+        Enemy cert = new Enemy.EnemyBuilder("Cert", new EnemyStats(12,45),new Weapon("OhnivyMec", 50)).build();
+        Enemy diablo = new Enemy.EnemyBuilder("Diablo", new EnemyStats(25,100),null).build();
 
         baseRoom.addItem(sword);
-        baseRoom.addItem(new Thing("Kost"));
-        baseRoom.addItem(new Thing("x"));
-        baseRoom.addItem(new Thing("k"));
-        baseRoom.addItem(new Thing("a"));
-        baseRoom.addItem(new Thing("c"));
-        baseRoom.addItem(new Thing("d"));
 
-        Room tombs = new RoomImpl("Hrobka", "Hrobka s kostlivcem",enemy);
+
+        Room tombs = new RoomImpl("Hrobka", "Hrobka s kostlivcem",kostlivec);
         baseRoom.registerExit(tombs);
         tombs.registerExit(baseRoom);
 
-        Room mine = new RoomImpl("Důl", "Důl s nemrtvým", new Enemy("Nemtrvý",new EnemyStats(6,30), new Weapon("ZlatyMec",30)));
+        Room mine = new RoomImpl("Důl", "Důl s nemrtvým", nemrtvy);
         tombs.registerExit(mine);
 
 
-        Room magicTower = new RoomImpl("Magickávěž", "Magická věž, kterou ochraňuje starý mág",enemy);
+        Room magicTower = new RoomImpl("Magickávěž", "Magická věž, kterou ochraňuje starý mág",kostlivec);
         mine.registerExit(magicTower);
         mine.registerExit(tombs);
 
-        Room secretRoom = new RoomImpl("TajnáMístnost", "Tajná místnost, kterou ochraňuje zlý duch kličníka",new Enemy("DuchKličník",new EnemyStats(20,60), new Key("Klic")));
+        Room secretRoom = new RoomImpl("TajnáMístnost", "Tajná místnost, kterou ochraňuje zlý duch kličníka",duch);
 
 
-        Room tortureChamber = new RoomImpl("Mučírna", "Mučírna plná mrtvých těl, kterou ochraňuje dáblův sluha", new Enemy("Čert",new EnemyStats(12,45), new Weapon("OhnivyMec", 50)));
+        Room tortureChamber = new RoomImpl("Mučírna", "Mučírna plná mrtvých těl, kterou ochraňuje dáblův sluha",cert);
         magicTower.registerExit(tortureChamber);
         magicTower.registerExit(mine);
         magicTower.registerExit(secretRoom);
         secretRoom.registerExit(magicTower);
 
-        Room ruin = new RoomImpl("Ruina", "Sídlo dábla", new Enemy("Diablo", new EnemyStats(25,100),null));
+        Room ruin = new RoomImpl("Ruina", "Sídlo dábla", diablo);
         tortureChamber.registerExit(ruin);
         tortureChamber.registerExit(magicTower);
+
+
+        baseRoom.addItem(new Thing("Kost"));
+        tombs.addItem(new Thing("Mince"));
+        mine.addItem(new Thing("Prach"));
+        magicTower.addItem(new Thing("Diamant"));
+        magicTower.addItem(new Thing("Obleceni"));
+        secretRoom.addItem(new Thing("Prsten"));
 
         rooms.add(baseRoom);
         rooms.add(tombs);

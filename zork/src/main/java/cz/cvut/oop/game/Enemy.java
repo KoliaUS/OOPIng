@@ -8,13 +8,28 @@ public class Enemy {
     private double currentHealth;
     private Inventory inventory;
 
-    public Enemy(String name, EnemyStats stats, Item item) {
-        this.name = name;
-        this.stats = stats;
-        this.currentHealth = stats.getHealth();
-        this.inventory = initInventory(item);
+    private Enemy(EnemyBuilder builder) {
+        this.name = builder.name;
+        this.stats = builder.stats;
+        this.currentHealth = builder.stats.getHealth();
+        this.inventory = initInventory(builder.item);
     }
 
+    public static class EnemyBuilder {
+        private final String name;
+        private final EnemyStats stats;
+        private final Item item;
+
+        public EnemyBuilder(String name, EnemyStats stats, Item item) {
+            this.name = name;
+            this.stats = stats;
+            this.item = item;
+        }
+
+        public Enemy build() {
+            return new Enemy(this);
+        }
+    }
 
     public String getName() {
         return name;
@@ -33,18 +48,15 @@ public class Enemy {
         return false;
     }
 
-
-
-    public double getDamage()
-    {
+    public double getDamage() {
         Random rand = new Random();
         double enemyDamage = 1.0 + rand.nextDouble() * 10 + stats.getEnemyDamage();
         return enemyDamage;
     }
 
-    public Inventory initInventory(Item item){
+    public Inventory initInventory(Item item) {
         inventory = new Inventory();
-        inventory.addToInventory(item,null);
+        inventory.addToInventory(item, null);
         return inventory;
     }
 
@@ -56,12 +68,8 @@ public class Enemy {
         return currentHealth;
     }
 
-
-
     public boolean isDead() {
-        if (currentHealth <= 0.0){
-            return true;
-        }
-        return false;
+        return currentHealth <= 0.0;
     }
+
 }

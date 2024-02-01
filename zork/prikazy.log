@@ -180,3 +180,19 @@
 01-02-2024 15:27:18 [main] INFO  cz.cvut.oop.ui.CommandLineUi - help
 01-02-2024 15:27:23 [main] INFO  cz.cvut.oop.ui.CommandLineUi - polož Klic
 01-02-2024 15:27:28 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+01-02-2024 16:19:47 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+01-02-2024 16:19:56 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+01-02-2024 16:20:00 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi Hrobka
+01-02-2024 16:20:02 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+01-02-2024 16:20:04 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+01-02-2024 16:20:10 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi Důl
+01-02-2024 16:20:17 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+01-02-2024 16:20:19 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+01-02-2024 16:20:21 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+01-02-2024 16:20:44 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+01-02-2024 16:20:51 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+01-02-2024 16:20:56 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi Hronka
+01-02-2024 16:21:01 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi Hrobka
+01-02-2024 16:21:04 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+01-02-2024 16:21:05 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+01-02-2024 16:21:11 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
