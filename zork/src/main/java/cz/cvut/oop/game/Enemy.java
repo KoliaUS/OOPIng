@@ -44,7 +44,7 @@ public class Enemy {
 
     public Inventory initInventory(Item item){
         inventory = new Inventory();
-        inventory.addToInventory(item);
+        inventory.addToInventory(item,null);
         return inventory;
     }
 

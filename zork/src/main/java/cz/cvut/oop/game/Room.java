@@ -18,5 +18,6 @@ public interface Room {
 
     void addItem(Item item);
 
+    public void removeEnemy();
     void removeItem(Item item);
 }

@@ -35,6 +35,7 @@ public class TakeCommand implements Command {
             return "Předmět '" + itemName + "' není v této místnosti.";
         }
 
+
         if (itemToTake instanceof Weapon) {
             Weapon weaponToTake = (Weapon) itemToTake;
 
@@ -50,9 +51,7 @@ public class TakeCommand implements Command {
 
             return "Vzal(a) jsi zbraň '" + itemName + "'.";
         } else {
-            player.getInventory().addToInventory(itemToTake);
-            currentRoom.removeItem(itemToTake);
-            return "Vzal(a) jsi předmět '" + itemName + "' a položil(a) jej do inventáře.";
+            return player.getInventory().addToInventory(itemToTake,gameData);
         }
     }
 

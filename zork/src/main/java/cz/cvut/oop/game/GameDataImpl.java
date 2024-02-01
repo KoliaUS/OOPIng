@@ -27,8 +27,17 @@ public class GameDataImpl implements GameData {
         this.rooms = new ArrayList<>();
         Room baseRoom = new RoomImpl("VchodJeskyně", "temná jeskyně a před sebou vidíš dveře do Hrobky");
         Weapon sword = new Weapon("Meč", 10);
+        Enemy enemy = new Enemy("Kostlivec", new EnemyStats(5,20), new Weapon("StribrnyMec",20));
+
         baseRoom.addItem(sword);
-        Room tombs = new RoomImpl("Hrobka", "Hrobka s kostlivcem",new Enemy("Kostlivec",new EnemyStats(4,20), new Weapon("StribrnyMec",20)));
+        baseRoom.addItem(new Thing("Kost"));
+        baseRoom.addItem(new Thing("x"));
+        baseRoom.addItem(new Thing("k"));
+        baseRoom.addItem(new Thing("a"));
+        baseRoom.addItem(new Thing("c"));
+        baseRoom.addItem(new Thing("d"));
+
+        Room tombs = new RoomImpl("Hrobka", "Hrobka s kostlivcem",enemy);
         baseRoom.registerExit(tombs);
         tombs.registerExit(baseRoom);
 
@@ -36,7 +45,7 @@ public class GameDataImpl implements GameData {
         tombs.registerExit(mine);
 
 
-        Room magicTower = new RoomImpl("Magickávěž", "Magická věž, kterou ochraňuje starý mág",new Enemy("Mág",new EnemyStats(10,35), new Weapon("KouzelnaHulka",40)));
+        Room magicTower = new RoomImpl("Magickávěž", "Magická věž, kterou ochraňuje starý mág",enemy);
         mine.registerExit(magicTower);
         mine.registerExit(tombs);
 

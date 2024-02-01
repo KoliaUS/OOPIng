@@ -28,12 +28,17 @@ public class Inventory {
         }
     }
 
-    public void addToInventory(Item item) {
+    public String addToInventory(Item item,GameData gameData) {
         if (itemArrayList.size() < size) {
             itemArrayList.add(item);
             notifyInventory();
+            if(gameData!=null) {
+                gameData.getCurrentRoom().removeItem(item);
+                return "Vzal(a) jsi předmět '" + item.getName() + "' a položil(a) jej do inventáře.";
+            }
+            return "";
         } else {
-            System.out.println("Není místo v inventáři.");
+            return "Není místo v inventáři.";
         }
     }
 

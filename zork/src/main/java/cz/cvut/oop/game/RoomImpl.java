@@ -12,7 +12,7 @@ public class RoomImpl implements Room {
     private String description;
     private Map<String,Room> exits = new HashMap<>();
 
-    private Collection<Item> items = new ArrayList<>();
+    private ArrayList<Item> items = new ArrayList<>();
 
 
     private Enemy enemy;
@@ -27,7 +27,10 @@ public class RoomImpl implements Room {
         this.name = name;
         this.description = description;
         this.enemy = enemy;
+
     }
+
+
 
     public void addItem(Item item)
     {
@@ -64,6 +67,11 @@ public class RoomImpl implements Room {
     public String getName() {
         return name;
     }
+
+    public void removeEnemy() {
+        this.enemy = null;
+    }
+
 
     @Override
     public String getDescriptionRoom() {

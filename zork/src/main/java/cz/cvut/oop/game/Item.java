@@ -8,7 +8,8 @@ public abstract class Item {
     }
     enum ItemType {
         WEAPON,
-        KEY
+        KEY,
+        THING
     }
     public String getName() {
         return name;

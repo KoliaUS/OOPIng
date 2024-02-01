@@ -26,14 +26,15 @@ public class AttackCommand implements Command {
             return "Není nasazena žádná zbraň.";
         }
 
-        if (enemy.isDead()) {
-            return "Nepřítel již byl poražen. Nemá smysl útočit znovu.";
+        if (enemy == null) {
+            return "V místnosti není žádný nepřítel.";
         }
 
         double damage = currentWeapon.getDamage();
         boolean killedEnemy = enemy.receiveDamage(damage);
 
         if (killedEnemy) {
+
             if (player.isDead()) {
                 return "Nepřítel byl poražen, ale bohužel jste zemřel.";
             } else if (enemy.getName().equals("Diablo")) {
@@ -41,6 +42,7 @@ public class AttackCommand implements Command {
                 return "Diablo byl poražen! Gratuluji, vyhrál jsi!";
             } else {
                 gameData.getCurrentRoom().addItemFromEnemy(enemy.getInventory().getItemArrayList());
+                gameData.getCurrentRoom().removeEnemy();
                 return "Nepřítel byl poražen! Zbývající životy hráče: " + formatHealth(player.getHealth());
             }
         } else {
