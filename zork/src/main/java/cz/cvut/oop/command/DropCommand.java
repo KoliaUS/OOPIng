@@ -25,7 +25,11 @@ public class DropCommand implements Command {
 
 
         Weapon currentWeapon = player.getCurrentWeapon();
-
+        if (currentWeapon != null) {
+            currentRoom.addItem(currentWeapon);
+            player.setCurrentWeapon(null);
+            return "Zbraň byla uspešně odebrána";
+        }
 
 
         Item itemToDrop = player.getInventory().getItemByName(itemName);
@@ -34,11 +38,7 @@ public class DropCommand implements Command {
         if (itemToDrop == null) {
             return "Předmět '" + itemName + "' není ve vašem inventáři.";
         }
-        if (currentWeapon != null && currentWeapon == itemToDrop) {
-            currentRoom.addItem(currentWeapon);
-            player.setCurrentWeapon(null);
-            return "Zbraň byla uspešně odebrána";
-        }
+
 
         currentRoom.addItem(itemToDrop);
         player.getInventory().removeFromInventory(itemToDrop);

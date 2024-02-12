@@ -196,3 +196,76 @@
 01-02-2024 16:21:04 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
 01-02-2024 16:21:05 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
 01-02-2024 16:21:11 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+12-02-2024 00:24:34 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+12-02-2024 00:24:41 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+12-02-2024 00:24:53 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vemzi Meč
+12-02-2024 00:25:00 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+12-02-2024 00:25:09 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Kost
+12-02-2024 00:31:32 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+12-02-2024 00:31:46 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Kost
+12-02-2024 00:33:53 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+12-02-2024 00:33:57 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Kost
+12-02-2024 00:47:41 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+12-02-2024 00:47:54 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+12-02-2024 00:48:08 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Kost
+12-02-2024 00:48:43 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+12-02-2024 00:48:50 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+12-02-2024 00:48:54 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Kost
+12-02-2024 00:50:40 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+12-02-2024 00:50:49 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+12-02-2024 00:50:53 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Kost
+12-02-2024 01:03:06 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+12-02-2024 01:03:17 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezm 
+12-02-2024 01:03:21 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+12-02-2024 01:03:25 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Kost
+12-02-2024 01:08:39 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+12-02-2024 01:08:44 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+12-02-2024 01:08:47 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Kost
+12-02-2024 01:12:59 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+12-02-2024 01:13:03 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+12-02-2024 01:13:06 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Kost
+12-02-2024 01:13:35 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+12-02-2024 01:13:43 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+12-02-2024 01:13:45 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Kost
+12-02-2024 01:14:56 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+12-02-2024 01:15:03 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Kost
+12-02-2024 01:15:08 [main] INFO  cz.cvut.oop.ui.CommandLineUi - Vezmi Meč
+12-02-2024 01:15:15 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+12-02-2024 01:15:20 [main] INFO  cz.cvut.oop.ui.CommandLineUi - help
+12-02-2024 01:15:27 [main] INFO  cz.cvut.oop.ui.CommandLineUi - polož Meč
+12-02-2024 01:15:34 [main] INFO  cz.cvut.oop.ui.CommandLineUi - Polož Kost
+12-02-2024 01:15:39 [main] INFO  cz.cvut.oop.ui.CommandLineUi - polož Kost
+12-02-2024 01:15:53 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+12-02-2024 01:16:01 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+12-02-2024 01:16:16 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+12-02-2024 01:16:19 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+12-02-2024 01:16:23 [main] INFO  cz.cvut.oop.ui.CommandLineUi - polož Meč
+12-02-2024 01:16:35 [main] INFO  cz.cvut.oop.ui.CommandLineUi - helo
+12-02-2024 01:16:37 [main] INFO  cz.cvut.oop.ui.CommandLineUi - help
+12-02-2024 01:18:08 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+12-02-2024 01:18:10 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+12-02-2024 01:18:13 [main] INFO  cz.cvut.oop.ui.CommandLineUi - polož Meč
+12-02-2024 01:19:03 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+12-02-2024 01:19:09 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+12-02-2024 01:19:14 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi Hrobka
+12-02-2024 01:19:17 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+12-02-2024 01:19:18 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+12-02-2024 01:19:21 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+12-02-2024 01:19:30 [main] INFO  cz.cvut.oop.ui.CommandLineUi - Vezmi StribrnyMec
+12-02-2024 01:19:38 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi StribrnyMec
+12-02-2024 01:19:46 [main] INFO  cz.cvut.oop.ui.CommandLineUi - polož StribrnyMec
+12-02-2024 01:21:09 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+12-02-2024 01:21:12 [main] INFO  cz.cvut.oop.ui.CommandLineUi - Vezmi Meč
+12-02-2024 01:21:16 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+12-02-2024 01:21:21 [main] INFO  cz.cvut.oop.ui.CommandLineUi - polož Meč
+12-02-2024 01:32:54 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+12-02-2024 01:32:59 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+12-02-2024 01:33:04 [main] INFO  cz.cvut.oop.ui.CommandLineUi - polož Meč
+12-02-2024 01:33:10 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+12-02-2024 01:34:24 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+12-02-2024 01:34:31 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+12-02-2024 01:34:34 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+12-02-2024 01:34:39 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+12-02-2024 01:34:44 [main] INFO  cz.cvut.oop.ui.CommandLineUi - polož Meč
+12-02-2024 01:34:48 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+12-02-2024 01:34:52 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
