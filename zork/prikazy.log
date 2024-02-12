@@ -269,3 +269,18 @@
 12-02-2024 01:34:44 [main] INFO  cz.cvut.oop.ui.CommandLineUi - polož Meč
 12-02-2024 01:34:48 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
 12-02-2024 01:34:52 [main] INFO  cz.cvut.oop.ui.CommandLineUi - vezmi Meč
+12-02-2024 01:38:34 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+12-02-2024 01:38:42 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi Horbka
+12-02-2024 01:38:47 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+12-02-2024 01:38:55 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi Hrobka
+12-02-2024 01:38:59 [main] INFO  cz.cvut.oop.ui.CommandLineUi - útok
+12-02-2024 01:39:06 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi VchodJeskyně
+12-02-2024 01:39:34 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi Důl
+12-02-2024 01:40:34 [main] INFO  cz.cvut.oop.ui.CommandLineUi - application started
+12-02-2024 01:40:38 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi Hrobka
+12-02-2024 01:40:47 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi Důl
+12-02-2024 01:40:56 [main] INFO  cz.cvut.oop.ui.CommandLineUi - jdi VchodJeskyně
+12-02-2024 01:41:05 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+12-02-2024 01:41:13 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+12-02-2024 01:41:16 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat
+12-02-2024 01:41:19 [main] INFO  cz.cvut.oop.ui.CommandLineUi - hledat

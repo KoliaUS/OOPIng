@@ -26,9 +26,10 @@ public class GoCommand implements Command {
         }
 
 
-//        if (!gameData.hasVisitedRoom(exitByName) && gameData.getCurrentRoom().getEnemy() != null && !gameData.getCurrentRoom().getEnemy().isDead()) {
-//            return "Nemůžeš jít do nové místnosti, dokud nezabiješ nepřítele v této místnosti!";
-//        }
+        if (gameData.getCurrentRoom().getEnemy() != null && !gameData.getCurrentRoom().getEnemy().isDead()) {
+            EnemyAction.performEnemyAction(gameData);
+            return "Nemůžeš jít do místnosti, dokud nezabiješ nepřítele v této místnosti!";
+        }
 
 
         if (roomName.equalsIgnoreCase("Ruina") && !gameData.getPlayer().hasKey()) {
