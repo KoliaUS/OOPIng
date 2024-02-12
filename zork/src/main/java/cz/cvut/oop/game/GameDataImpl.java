@@ -28,8 +28,9 @@ public class GameDataImpl implements GameData {
         Room baseRoom = new RoomImpl("VchodJeskyně", "temná jeskyně a před sebou vidíš dveře do Hrobky");
         Weapon sword = new Weapon("Meč", 10);
 
-        Enemy kostlivec = new Enemy.EnemyBuilder("Kostlivec", new EnemyStats(5, 20), new Weapon("StribrnyMec", 20)).build();
-        Enemy nemrtvy = new Enemy.EnemyBuilder("Nemrtvy", new EnemyStats(6,30),new Weapon("ZlatyMec",30)).build();
+        Enemy kostlivec = EnemyFlyweightFactory.getEnemy("Kostlivec", new EnemyStats(5, 20), new Weapon("StribrnyMec", 20));
+        Enemy nemrtvy = EnemyFlyweightFactory.getEnemy("Nemrtvy", new EnemyStats(6,30), new Weapon("ZlatyMec",30));
+
         Enemy duch = new Enemy.EnemyBuilder("DuchKlicnik", new EnemyStats(20,60), new Key("Klic")).build();
         Enemy cert = new Enemy.EnemyBuilder("Cert", new EnemyStats(12,45),new Weapon("OhnivyMec", 50)).build();
         Enemy diablo = new Enemy.EnemyBuilder("Diablo", new EnemyStats(25,100),null).build();
@@ -45,7 +46,7 @@ public class GameDataImpl implements GameData {
         tombs.registerExit(mine);
 
 
-        Room magicTower = new RoomImpl("Magickávěž", "Magická věž, kterou ochraňuje starý mág",kostlivec);
+        Room magicTower = new RoomImpl("Magickávěž", "Magická věž, kterou ochraňuje kostlivec",kostlivec);
         mine.registerExit(magicTower);
         mine.registerExit(tombs);
 
