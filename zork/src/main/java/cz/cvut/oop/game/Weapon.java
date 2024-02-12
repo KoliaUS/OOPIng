@@ -23,5 +23,11 @@ public class Weapon extends Item {
         double weaponDamage = 1.0 + rand.nextDouble() * 10 + damage;
         return weaponDamage;
     }
+
+
+    public String getDisplayName() {
+
+        return "Zbraň: " + super.getName();
+    }
 }
 
