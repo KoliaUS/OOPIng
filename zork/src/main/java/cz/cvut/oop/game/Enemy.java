@@ -4,25 +4,27 @@ import java.util.Random;
 
 public class Enemy {
     private final String name;
-    private final EnemyStats stats;
+
     private double currentHealth;
+    private final EnemyType enemyType;
     private Inventory inventory;
 
     private Enemy(EnemyBuilder builder) {
         this.name = builder.name;
-        this.stats = builder.stats;
-        this.currentHealth = builder.stats.getHealth();
+        this.enemyType = builder.enemyType;
+        this.currentHealth = builder.enemyType.getHealth();
         this.inventory = initInventory(builder.item);
     }
 
     public static class EnemyBuilder {
         private final String name;
-        private final EnemyStats stats;
+        private final EnemyType enemyType;
+
         private final Item item;
 
-        public EnemyBuilder(String name, EnemyStats stats, Item item) {
+        public EnemyBuilder(String name, EnemyType enemyType, Item item) {
             this.name = name;
-            this.stats = stats;
+            this.enemyType = enemyType;
             this.item = item;
         }
 
@@ -31,13 +33,15 @@ public class Enemy {
         }
     }
 
+    public EnemyType getEnemyType() {
+        return enemyType;
+    }
+
     public String getName() {
         return name;
     }
 
-    public EnemyStats getStats() {
-        return stats;
-    }
+
 
     public boolean receiveDamage(double damage) {
         currentHealth -= damage;
@@ -50,7 +54,7 @@ public class Enemy {
 
     public double getDamage() {
         Random rand = new Random();
-        double enemyDamage = 1.0 + rand.nextDouble() * 10 + stats.getEnemyDamage();
+        double enemyDamage = 1.0 + rand.nextDouble() * 10 + enemyType.getDamage();
         return enemyDamage;
     }
 

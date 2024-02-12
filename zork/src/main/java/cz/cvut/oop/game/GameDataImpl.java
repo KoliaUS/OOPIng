@@ -28,21 +28,29 @@ public class GameDataImpl implements GameData {
         Room baseRoom = new RoomImpl("VchodJeskyně", "temná jeskyně a před sebou vidíš dveře do Hrobky");
         Weapon sword = new Weapon("Meč", 10);
 
-        Enemy kostlivec = EnemyFlyweightFactory.getEnemy("Kostlivec", new EnemyStats(5, 20), new Weapon("StribrnyMec", 20));
-        Enemy nemrtvy = EnemyFlyweightFactory.getEnemy("Nemrtvy", new EnemyStats(6,30), new Weapon("ZlatyMec",30));
+        EnemyType skeletonType = new EnemyType("Kostlivec", 20, 5);
+        EnemyType undeadType = new EnemyType("Nemrtvý", 30, 6);
+        EnemyType ghostType = new EnemyType("Duch",20,60);
+        EnemyType servantDiabloType = new EnemyType("Čert", 20,60);
+        EnemyType bossType = new EnemyType("Diablo", 25,100);
 
-        Enemy duch = new Enemy.EnemyBuilder("DuchKlicnik", new EnemyStats(20,60), new Key("Klic")).build();
-        Enemy cert = new Enemy.EnemyBuilder("Cert", new EnemyStats(12,45),new Weapon("OhnivyMec", 50)).build();
-        Enemy diablo = new Enemy.EnemyBuilder("Diablo", new EnemyStats(25,100),null).build();
+        Enemy kostlivec = new Enemy.EnemyBuilder("Kostlivec", skeletonType, null).build();
+        Enemy kostlivecMec = new Enemy.EnemyBuilder("Kostlivec s Mečem",skeletonType,new Weapon("StribrnyMec",20)).build();
+
+        Enemy nemrtvyMec = new Enemy.EnemyBuilder("Nemrtvy",undeadType,new Weapon("ZlatyMec",35)).build();
+        Enemy duch = new Enemy.EnemyBuilder("Duch", ghostType, new Key("Klic")).build();
+        Enemy cert = new Enemy.EnemyBuilder("Čert", servantDiabloType,new Weapon("OhnivyMec", 50)).build();
+        Enemy diablo = new Enemy.EnemyBuilder("Diablo",bossType,null).build();
+
 
         baseRoom.addItem(sword);
 
 
-        Room tombs = new RoomImpl("Hrobka", "Hrobka s kostlivcem",kostlivec);
+        Room tombs = new RoomImpl("Hrobka", "Hrobka s kostlivcem",kostlivecMec);
         baseRoom.registerExit(tombs);
         tombs.registerExit(baseRoom);
 
-        Room mine = new RoomImpl("Důl", "Důl s nemrtvým", nemrtvy);
+        Room mine = new RoomImpl("Důl", "Důl s nemrtvým", nemrtvyMec);
         tombs.registerExit(mine);
 
 
